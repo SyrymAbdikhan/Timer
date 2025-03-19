@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#countdown {
+    width: 100%;
+    max-width: 50rem;
+    height: 100svh;
+    margin-inline: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#countdown>.numbers {
+    display: flex;
+    font-size: 8rem;
+    align-items: center;
+}
+
+#countdown>#description {
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+#countdown>.numbers>span {
+    position: relative;
+    top: -.1em;
+}
+
+#countdown>.numbers .number {
+    width: 10rem;
+    margin-inline: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+#countdown>.numbers .number>div {
+    width: 50%;
+    text-align: center;
+}
+
+
+
+@media (max-width: 672px) {
+    #countdown>.numbers {
+        font-size: 4rem;
+    }
+    #countdown>.numbers .number {
+        width: 5rem;
+    }
+    #countdown>#description {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 384px) {
+    #countdown>.numbers {
+        font-size: 2.4rem;
+    }
+    #countdown>.numbers .number {
+        width: 3rem;
+    }
+    #countdown>#description {
+        font-size: 1rem;
+    }
+}
