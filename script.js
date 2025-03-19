@@ -41,9 +41,9 @@ function toDatetime(time) {
     return new Date(now.getFullYear(), now.getMonth(), now.getDate(), ...time);
 }
 
-function rowToTime(row) {
-    row.sahur = toDatetime(row.sahur).getTime();
-    row.iftar = toDatetime(row.iftar).getTime();
+function rowToTime(row, add=0) {
+    row.sahur = toDatetime(row.sahur).getTime() + add;
+    row.iftar = toDatetime(row.iftar).getTime() + add;
     return row;
 }
 
@@ -64,7 +64,7 @@ function cycle() {
     var now = new Date().getTime();
 
     var today = rowToTime(rows[0]);
-    var tomorrow = rowToTime(rows[1]);
+    var tomorrow = rowToTime(rows[1], 86400000);
 
     var diff = 0, text = "eternity";
     if (now < today.sahur) {
