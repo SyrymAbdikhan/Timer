@@ -22,12 +22,12 @@ body {
 
 #countdown>.numbers {
     display: flex;
-    font-size: 8rem;
+    font-size: 20vw;
     align-items: center;
 }
 
 #countdown>#description {
-    font-size: 2rem;
+    font-size: 5vw;
     font-weight: lighter;
 }
 
@@ -37,8 +37,8 @@ body {
 }
 
 #countdown>.numbers .number {
-    width: 10rem;
-    margin-inline: 1rem;
+    width: 25vw;
+    margin-inline: 1vw;
     display: flex;
     align-items: center;
 }
@@ -46,32 +46,4 @@ body {
 #countdown>.numbers .number>div {
     width: 50%;
     text-align: center;
-}
-
-
-
-@media (max-width: 672px) {
-    #countdown>.numbers {
-        font-size: 4rem;
-    }
-    #countdown>.numbers .number {
-        width: 5rem;
-        margin-inline: .5rem;
-    }
-    #countdown>#description {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 384px) {
-    #countdown>.numbers {
-        font-size: 2.4rem;
-    }
-    #countdown>.numbers .number {
-        width: 3rem;
-        margin-inline: .3rem;
-    }
-    #countdown>#description {
-        font-size: 1rem;
-    }
 }
